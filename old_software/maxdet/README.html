@@ -1,0 +1,67 @@
+MAXDET: Software for maxdet programming.  
+Includes full C source (which calls LAPACK), which can be used 
+directly or via matlab mex file interfaces, matlab examples, 
+and documentation.
+
+*ALPHA* VERSION. May 1996.  
+Please be sure to check for updated versions via anonymous ftp to 
+isl.stanford.edu, in pub/boyd/maxdet.
+
+COPYRIGHT 1996 SHAO-PO WU, LIEVEN VANDENBERGHE AND STEPHEN BOYD
+Permission to use, copy, modify, and distribute this software for 
+any purpose without fee is hereby granted, provided that this entire 
+notice is included in all copies of any software which is or includes
+a copy or modification of this software and in all copies of the 
+supporting documentation for such software.
+This software is being provided "as is", without any express or 
+implied warranty.  In particular, the authors do not make any
+representation or warranty of any kind concerning the merchantability
+of this software or its fitness for any particular purpose.
+
+CONTENTS: 
+The FTP directory pub/boyd/maxdet at isl.stanford.edu contains
+the following files:
+- README: this file
+- maxdet.tar.Z: the package, including all source files and 
+  documentation, but no executable files 
+- maxdet.mexds.Z: the executable mex-interface for DECstations
+- maxdet.mex4.Z: the executable mex-interface for SUN4/Sparcstations (SunOS)
+- maxdet.mexsol.Z: the executable mex-interface for SUN4 (solaris)
+- maxdet.mexhp7.Z: the executable mex-interface for HP 9000/700 series
+
+
+TO INSTALL THE PACKAGE:
+1. Move maxdet.tar.Z to the directory where you want the code to 
+   live. Then:
+
+   your-machine> zcat maxdet.tar.Z | tar xvf -
+
+   This creates a directory maxdet with C sources, MATLAB m-files and 
+   two subdirectories: maxdet/EXAMPLES (containing MATLAB example 
+   files), and maxdet/DOC (containing a postscript file doc.ps with 
+   documentation, and a copy of the companion paper "Determinant 
+   Maximization with Linear Matrix Inequality Constraints" in 
+   compressed postscript).
+
+2. To install the mex-interface on your machine:
+   - either go to maxdet, edit the Makefile, type make to compile 
+     your own mex-file,
+   - or, if your machine is a DECstation, Sun4 or Sparcstation, 
+     or HP workstation of the 9000/700 series, ftp one of the 
+     executable mex-interface maxdet.mexXXX.Z, and 
+
+     your-machine> uncompress maxdet.mexXXX
+
+     Here `XXX' stands for `ds' if you have a DECstation, `4' if you 
+     have a SUN4 or Sparcstation, or `hp7' if you have an HP.
+
+
+The documentation and the code are still under development. Please do 
+not hesitate to send e-mail to clive@isl.stanford.edu,
+vandenbe@isl.stanford.edu or boyd@isl.stanford.edu with your comments or
+questions.
+
+Shao-Po Wu, Lieven Vandenberghe & Stephen Boyd
+
+May 1996
+Stanford CA
